@@ -1,0 +1,67 @@
+/* ===================================== GLOBAL STYLES =================================== */
+
+body {
+  font-family: Barlow, sans-serif;
+  background-color: #f5f0e6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ================================================== CONTAINERS ======================================== */
+
+.container {
+  max-width: 375px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 755px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+    .container {
+      max-width: 1366px;
+    }
+  }
+
+
+
+
