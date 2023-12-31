@@ -3,6 +3,7 @@
 body {
   font-family: Barlow, sans-serif;
   background-color: #f5f0e6;
+  color: #161107;
 }
 
 ul {
@@ -57,11 +58,68 @@ img {
 }
 
 @media screen and (min-width: 1366px) {
-    .container {
-      max-width: 1366px;
-    }
+  .container {
+    max-width: 1366px;
   }
+}
 
+/* =========================================== HEADER ========================================== */
 
+@media screen and (max-width: 767px) {
+  .page-menu {
+    display: none;
+  }
+}
 
+.main-header {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.header-container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts-item:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+.contacts-item:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.contacts-link {
+  width: 100%;
+  height: 100%;
+  color: #161107;
+  font-size: 17px;
+  font-style: normal;
+  transition: color 250ms linear, fill 250ms linear;
+}
+
+.contacts-link:hover,
+.contacts-link:focus,
+.contacts-link:active {
+  color: #FFA500;
+}
+
+.contacts-link:hover .instagram-svg {
+  fill:#FFA500;
+}
+
+.instagram-svg {
+  fill:#161107;
+}
+
+/* .page-nav {
+}
+
+.logo {
+} */
 
