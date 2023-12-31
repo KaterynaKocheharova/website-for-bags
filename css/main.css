@@ -78,8 +78,15 @@ img {
 .header-container {
   height: 100px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.contacts {
+  margin-right: 70px;
+}
+
+.page-nav {
+  margin-right: auto;
 }
 
 .contacts-item:nth-child(1) {
@@ -87,8 +94,8 @@ img {
 }
 
 .contacts-item:nth-child(2) {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -99,27 +106,55 @@ img {
   height: 100%;
   color: #161107;
   font-size: 17px;
-  font-style: normal;
-  transition: color 250ms linear, fill 250ms linear;
+  transition: color 250ms linear;
 }
 
 .contacts-link:hover,
 .contacts-link:focus,
 .contacts-link:active {
-  color: #FFA500;
-}
-
-.contacts-link:hover .instagram-svg {
-  fill:#FFA500;
+  color: #B18935;
 }
 
 .instagram-svg {
-  fill:#161107;
+  fill: inherit;
+  transition: fill 250ms linear;
 }
 
-/* .page-nav {
+.contacts-link:hover .instagram-svg {
+  fill: #B18935;
 }
 
 .logo {
-} */
+  margin-left: 5px;
+  text-align: center;
+  font-family: 'Sevillana', cursive;
+  color:rgba(88, 69, 27, 0.6);
+  /* color:  #B18935; */
+  font-size: 60px;
+  text-transform: capitalize;
+} 
+
+.burger-button {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.burger-button-icon {
+  stroke: transparent;
+  fill: rgba(22, 17, 7, 0.8);
+  transition: fill 250ms linear;
+}
+
+.burger-button:hover .burger-button-icon,
+.burger-button:focus .burger-button-icon,
+.burger-button:active .burger-button-icon {
+fill: #B18935;
+}
 
