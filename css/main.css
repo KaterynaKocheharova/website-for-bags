@@ -53,44 +53,64 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 755px;
+    max-width: 768px;
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1168px) {
   .container {
-    max-width: 1366px;
+    max-width: 1160px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .container {
+    max-width: 1336px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
   }
 }
 
 /* =========================================== HEADER ========================================== */
 
-@media screen and (max-width: 767px) {
-  .page-menu {
-    display: none;
-  }
-}
-
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999999999999;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .header-container {
-  height: 100px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.contacts {
-  margin-right: 70px;
+@media screen and (min-width: 1168px) {
+  .header-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
-.page-nav {
-  margin-right: auto;
-}
+/* ======================================== CONTACTS ============================================ */
 
 .contacts-item:nth-child(1) {
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1168px) {
+  .contacts-item:nth-child(1) {
+    margin-bottom: 25px;
+  }
 }
 
 .contacts-item:nth-child(2) {
@@ -109,6 +129,12 @@ img {
   transition: color 250ms linear;
 }
 
+@media screen and (min-width: 1168px) {
+  .contacts-link {
+    font-size: 20px;
+  }
+}
+
 .contacts-link:hover,
 .contacts-link:focus,
 .contacts-link:active {
@@ -124,15 +150,67 @@ img {
   fill: #B18935;
 }
 
+/* =================================================== LOGO ================================================== */
+
 .logo {
-  margin-left: 5px;
-  text-align: center;
   font-family: 'Sevillana', cursive;
   color:rgba(88, 69, 27, 0.6);
-  /* color:  #B18935; */
   font-size: 60px;
   text-transform: capitalize;
 } 
+
+@media screen and (min-width: 1168px) {
+  .logo {
+    font-size: 80px;
+  } 
+}
+/* ================================================ NAVIGATION =============================================== */
+
+.page-nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .page-nav {
+    display: block;
+  }
+
+  .page-menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1168px) {
+  .page-menu {
+    gap: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-menu-link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #161107;
+    font-size: 17px;
+    transition: color 250ms linear;
+  }
+  
+  .page-menu-link:hover,
+  .page-menu-link:focus,
+  .page-menu-link:active {
+    color: #B18935;
+  }
+  }
+
+  @media screen and (min-width: 1168px) {
+    .page-menu-link {
+      font-size: 20px;
+    }
+  }
+
+/* ============================================== BURGER BUTTON ============================================ */
 
 .burger-button {
   width: 25px;
@@ -157,4 +235,13 @@ img {
 .burger-button:active .burger-button-icon {
 fill: #B18935;
 }
+
+@media screen and (min-width: 768px) {
+  .burger-button {
+    display: none;
+  }
+}
+
+
+
 
