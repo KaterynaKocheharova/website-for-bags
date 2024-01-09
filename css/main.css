@@ -256,7 +256,7 @@ fill: #B18935;
 
 /* https://codepen.io/fajardyn/pen/LYOxYKP */
 
-/* ============================================= MENU WITH TRANSITION ======================================================= */
+/* ============================================= MENU ======================================================= */
 
 @keyframes slide-in {
   from {
@@ -304,10 +304,21 @@ fill: #B18935;
   gap: 70px;
 }
 
+@keyframes header-link {
+  0% {
+    font-size: 30px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
 .mobile-menu-link {
   font-size: 30px;
-  color: rgba(88, 69, 27, 0.6);
-  transition: color 250ms linear, font-size 250ms linear;
+  color: rgba(88, 69, 27, 0.5);
+  text-shadow: 0 0 3px rgba(147, 136, 96, 0.3),
+    0 2px 4px rgba(158, 144, 53, 0.3);
+    transition: font-size 250ms linear;
 }
 
 .mobile-menu-link:hover,
@@ -316,23 +327,45 @@ fill: #B18935;
   font-size: 50px;
 }
 
-.mobile-menu-link {
+.first-mobile-menu-link,
+.second-mobile-menu-link,
+.third-mobile-menu-link {
   position: relative;
-  text-align: center;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  justify-content: center;
 }
 
-.mobile-menu-link::after {
+.first-mobile-menu-link::after,
+.second-mobile-menu-link::after,
+.third-mobile-menu-link::after {
   position: absolute;
   display: block;
   content: "";
+  border-radius: 15%;
   background-color: rgba(88, 69, 27, 0.6);
-  box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
-  width: 100%;
+  box-shadow: 0 0 6px rgba(147, 136, 96, 0.5), 0 2px 4px rgba(158, 144, 53, 0.5);
+  width: 150px;
   height: 1px;
   bottom: -35px;
 }
 
+@keyframes after-styles {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
 
+.first-mobile-menu-link:hover::after,
+.second-mobile-menu-link:hover::after,
+.third-mobile-menu-link:hover::after,
+.first-mobile-menu-link:focus::after,
+.second-mobile-menu-link:focus::after,
+.third-mobile-menu-link:focus::after,
+.first-mobile-menu-link:active::after,
+.second-mobile-menu-link:active::after,
+.third-mobile-menu-link:active::after {
+  animation: after-styles 250ms linear both;
+}
